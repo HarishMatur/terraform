@@ -21,5 +21,3 @@ variable "key_name" {
     description = "key pair name to access the instance"
     default = "my-key-pair"
 }
-
-
