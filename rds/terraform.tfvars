@@ -1,10 +1,10 @@
-engine = postgres
+engine = "postgres"
 engine_version = 16.3
-username = postgres
-instance_class = db.t3.micro
+username = "postgres"
+instance_class = "db.t3.micro"
 allocated_storage = 20
 multi_az = false
 publicly_accessible = false
-db_name = my-rds-database
+db_name = "my-rds-database"
 skip_final_snapshot = true
 storage_encrypted = true
