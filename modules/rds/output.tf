@@ -7,5 +7,5 @@ output "aws_rds_instance_endpoint" {
 }
 
 output "rds_secret_arn" {
-    value = aws_secretmanager_secret.rds_secret.arn
+    value = aws_secretsmanager_secret.rds_secret.arn
 }
