@@ -9,6 +9,7 @@ resource "random_password" "rds_password" {
 resource "aws_secretsmanager_secret" "rds_secret" {
     name = "${var.db_name}-master-credentials"
     description = "Master credentials for RDS instance ${var.db_name}"
+    recovery_window_in_days = 0
     tags = {
         Name = "${var.db_name}-master-credentials"
     }
