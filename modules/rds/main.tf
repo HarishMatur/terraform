@@ -18,7 +18,7 @@ resource "aws_secretmanager_secret" "rds_secret" {
 resource "aws_secretmanager_secret_version" "rds_secret_version" {
     secret_id = aws_secretmanager_secret.rds_secret.id
     secret_string = jsonencode({
-        username = var.master_username
+        username = var.username
         password = random_password.rds_password.result
     })
 }
@@ -26,8 +26,8 @@ resource "aws_secretmanager_secret_version" "rds_secret_version" {
 resource "aws_db_instance" "my_rds_instance" {
     engine = var.engine
     engine_version = var.engine_version
-    master_username = var.master_username
-    master_password = random_password.rds_password.result
+    username = var.username
+    password = random_password.rds_password.result
     instance_class = var.instance_class
     allocated_storage = var.allocated_storage
     multi_az = var.multi_az

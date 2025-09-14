@@ -2,7 +2,7 @@ module "rds" {
     source = "../modules/rds"
     engine = var.engine
     engine_version = var.engine_version
-    master_username = var.master_username
+    username = var.username
     instance_class = var.instance_class
     allocated_storage = var.allocated_storage
     multi_az = var.multi_az

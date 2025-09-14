@@ -10,7 +10,7 @@ variable "engine_version" {
     default = "13.4"
 }
 
-variable "master_username" {
+variable "username" {
     type = string
     description = "The master username for the database"
     default = "admin"
